@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "delaGothic";
+  src: url("fonts/DelaGothicOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "unknownRegular";
+  src: url("fonts/UnknowRegular-JRMLa.ttf");
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(30px, 30px, 30px) rotate(360deg);
+  }
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  color: white;
+  left: 0;
+  background: rgb(116, 35, 79);
+  background: linear-gradient(
+    240deg,
+    rgb(68, 18, 46) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  overflow-x: hidden;
+}
+
+.circles {
+  width: 80vmin;
+  height: 50vmin;
+  border-radius: 50vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 50;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+}
+
+.background .circles:nth-child(0) {
+  color: #351f4b;
+  top: 35%;
+  left: 9%;
+  animation-duration: 183s;
+  animation-delay: -228s;
+  opacity: 20%;
+  transform-origin: 20vw 0vh;
+  box-shadow: 100vmin 0 13.171979817426719vmin currentColor;
+  overflow: hidden;
+}
+.background .circles:nth-child(1) {
+  color: #b700ff;
+  top: 87%;
+  left: 4%;
+  opacity: 20%;
+  animation-duration: 350s;
+  animation-delay: -193s;
+  transform-origin: 10vw -22vh;
+  box-shadow: -100vmin 0 13.116885873803149vmin currentColor;
+  overflow: hidden;
+}
+.background .circles:nth-child(2) {
+  color: #f70776;
+  top: 21%;
+  left: 1%;
+  opacity: 20%;
+  animation-duration: 232s;
+  animation-delay: -232s;
+  transform-origin: 10vw 40vh;
+  box-shadow: -100vmin 0 12.819596843717036vmin currentColor;
+}
+
+/* NAVBAR - links */
+
+.navbar {
+  width: 93%;
+  height: 10%;
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 20px 40px 0px 40px;
+  padding: 20px;
+  border: 1px solid #680747;
+  box-shadow: 1px 1px 10px #3d062b;
+  background: #141010;
+  border-radius: 40px;
+  z-index: 10000;
+  gap: 20px;
+}
+.navbar div {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  gap: 20px;
+}
+
+.developer-png {
+  width: 30px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  list-style: none;
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.555);
+}
+
+.navbar ul li a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 20px;
+  position: absolute;
+  background: hsl(332, 94%, 50%);
+  transition: width 0.4s ease 0s, left 0.4s ease 0s;
+  width: 0;
+  text-align: center;
+}
+
+.home:hover:after {
+  width: 3.5%;
+}
+.about:hover:after {
+  width: 3.5%;
+}
+.projects:hover:after {
+  width: 4.5%;
+}
+.contact:hover:after {
+  width: 4.5%;
+}
+.navbar ul li a:hover {
+  color: rgba(255, 255, 255, 0.767);
+}
+
+.arrow-with-scribble {
+  width: 80px;
+  opacity: 100%;
+  filter: invert(100%);
+  margin: 120px 0px 0px 80px;
+  transform: rotate(10deg);
+}
+
+/* BRIEF PRESENTATION - AG FRONT END WEB DEV */
+
+.main-presentation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.brief-presentation {
+  width: 40%;
+  margin: -30px 0px 0px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myName {
+  font-size: 76px;
+  font-family: "unknownRegular";
+}
+.brief-presentation h2 {
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-size: 33px;
+}
+
+.brief-presentation div {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.brief-presentation div p:first-child {
+  writing-mode: vertical-rl;
+}
+
+.arrow-down {
+  width: 200px;
+  margin-left: 100px;
+  filter: invert(100%);
+}
+
+.download-png {
+  width: 30px;
+  filter: invert(100%);
+}
+.profile-pic {
+  display: flex;
+  justify-content: center;
+}
+.profile-pic a {
+  text-decoration: none;
+}
+
+.profile-pic button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f70776;
+  color: white;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  position: relative;
+  left: 35px;
+  transition: all 300ms;
+}
+
+.profile-pic button:hover {
+  transform: translate(-15px, -15px);
+  background-color: #ff2db6;
+}
+.arianna-img {
+  width: 350px;
+  height: auto;
+}
+
+/* HEADINGLINKS */
+
+.heading-links {
+  width: 25px;
+  height: auto;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: transform 300ms;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.heading-links:hover {
+  transform: translateX(-12px);
+}
+
+/* ABOUT ME */
+
+.about-me {
+  margin: 80px 100px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.anime-coder {
+  width: 350px;
+  height: auto;
+  border-radius: 50px;
+}
+
+.about-me-paragraph {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-me-paragraph h2 {
+  font-size: 80px;
+  position: relative;
+  right: 180px;
+  width: 500px;
+}
+.about-me-paragraph div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-about-me-caption {
+  opacity: 0.7;
+}
+.horizontal-dots {
+  filter: invert(80%);
+  width: 150px;
+  height: 150px;
+  transform: rotate(45deg);
+  position: relative;
+  right: 250px;
+  filter: hue-rotate(50%);
+}
+.about-me-paragraph button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  width: 160px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #f70776;
+  color: white;
+  text-decoration: none;
+  border: none;
+  transition: all ease-in-out 0.5s;
+  padding-left: 25px;
+}
+
+.about-me-paragraph button:after {
+  content: "➟";
+  position: relative;
+  opacity: 0;
+  bottom: 1px;
+  left: -20px;
+  transition: 0.5s;
+  font-weight: lighter;
+  font-size: 23px;
+}
+
+.about-me-paragraph button:hover {
+  padding-right: 24px;
+  padding-left: 15px;
+  background-color: #ff2db6;
+}
+
+.about-me-paragraph button:hover:after {
+  opacity: 1;
+  left: 5px;
+}
+
+.logos-carousel {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex: 0 0 100%;
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  animation: scrolling 70s linear infinite;
+}
+.group:hover {
+  animation-play-state: paused;
+}
+.card{
+  width: 50px;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.card {
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  width: 210px;
+}
+
+/* MEDIA QUERIES  */
+
+@media screen and (max-width: 768px) {
+  .AriannaGiaccari {
+    display: none;
+  }
+
+  .arrow-with-scribble {
+    width: 75px;
+    margin: 120px 0px 0px 70px;
+    transform: rotate(0deg);
+  }
+
+  .main-presentation {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brief-presentation {
+    width: 70%;
+    margin: 0px;
+    text-align: center;
+  }
+  .navbar {
+    justify-content: space-around;
+    height: 8%;
+    width: 90%;
+    gap: 10px;
+  }
+  .navbar ul li a:hover:after {
+    width: 10%;
+  }
+  .horizontal-dots {
+    display: none;
+  }
+
+  .arianna-img {
+    width: 200px;
+  }
+  .profile-pic button {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+
+  .about-me {
+    margin: 100px 50px;
+  }
+  .anime-coder {
+    width: 300px;
+  }
+  .about-me {
+    flex-wrap: wrap;
+  }
+  .about-me-paragraph h2 {
+    width: 500px;
+    right: 40px;
+    font-size: 50px;
+  }
+}
+
+/* 
+button {
+  margin: 3em 0;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px solid rgba(149, 99, 255, 0.5);
+  outline: none;
+  border-radius: 0.75em;
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.32) 100%
+    ),
+    rgba(113, 47, 255, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+} */

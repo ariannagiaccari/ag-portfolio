@@ -11,13 +11,17 @@
 }
 
 @font-face {
-  font-family: "delaGothic";
-  src: url("fonts/DelaGothicOne-Regular.ttf");
+  font-family: "archivoBlack";
+  src: url("fonts/ArchivoBlack-Regular.ttf");
 }
 
 @font-face {
-  font-family: "unknownRegular";
-  src: url("fonts/UnknowRegular-JRMLa.ttf");
+  font-family: "phitagate";
+  src: url("fonts/Phitagate-Regular.otf");
+}
+@font-face {
+  font-family: "klemer";
+  src: url("fonts/klemer-display-demo.regular.ttf");
 }
 
 @keyframes move {
@@ -32,59 +36,9 @@
   top: 0;
   color: white;
   left: 0;
-  background: rgb(116, 35, 79);
-  background: linear-gradient(
-    240deg,
-    rgb(68, 18, 46) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: url(media/background.png);
   overflow-x: hidden;
-}
-
-.circles {
-  width: 80vmin;
-  height: 50vmin;
-  border-radius: 50vmin;
-  backface-visibility: hidden;
-  position: absolute;
-  animation: move;
-  animation-duration: 50;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  overflow: hidden;
-}
-
-.background .circles:nth-child(0) {
-  color: #351f4b;
-  top: 35%;
-  left: 9%;
-  animation-duration: 183s;
-  animation-delay: -228s;
-  opacity: 20%;
-  transform-origin: 20vw 0vh;
-  box-shadow: 100vmin 0 13.171979817426719vmin currentColor;
-  overflow: hidden;
-}
-.background .circles:nth-child(1) {
-  color: #b700ff;
-  top: 87%;
-  left: 4%;
-  opacity: 20%;
-  animation-duration: 350s;
-  animation-delay: -193s;
-  transform-origin: 10vw -22vh;
-  box-shadow: -100vmin 0 13.116885873803149vmin currentColor;
-  overflow: hidden;
-}
-.background .circles:nth-child(2) {
-  color: #f70776;
-  top: 21%;
-  left: 1%;
-  opacity: 20%;
-  animation-duration: 232s;
-  animation-delay: -232s;
-  transform-origin: 10vw 40vh;
-  box-shadow: -100vmin 0 12.819596843717036vmin currentColor;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.581);
 }
 
 /* NAVBAR - links */
@@ -102,7 +56,7 @@
   padding: 20px;
   border: 1px solid #680747;
   box-shadow: 1px 1px 10px #3d062b;
-  background: #141010;
+  background: #0a020c;
   border-radius: 40px;
   z-index: 10000;
   gap: 20px;
@@ -147,16 +101,16 @@
 }
 
 .home:hover:after {
-  width: 3.5%;
+  width: 4.5%;
 }
 .about:hover:after {
-  width: 3.5%;
+  width: 4.5%;
 }
 .projects:hover:after {
-  width: 4.5%;
+  width: 5.5%;
 }
 .contact:hover:after {
-  width: 4.5%;
+  width: 5.5%;
 }
 .navbar ul li a:hover {
   color: rgba(255, 255, 255, 0.767);
@@ -164,7 +118,7 @@
 
 .arrow-with-scribble {
   width: 80px;
-  opacity: 100%;
+  opacity: 0.8;
   filter: invert(100%);
   margin: 120px 0px 0px 80px;
   transform: rotate(10deg);
@@ -180,7 +134,7 @@
 }
 
 .brief-presentation {
-  width: 40%;
+  width: 45%;
   margin: -30px 0px 0px 150px;
   display: flex;
   flex-direction: column;
@@ -188,8 +142,18 @@
 }
 
 .myName {
-  font-size: 76px;
-  font-family: "unknownRegular";
+  font-size: 85px;
+  line-height: 63px;
+  font-family: "archivoBlack";
+
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  /* color: transparent;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: rgb(255, 0, 170);
+  text-shadow: none; */
+  background-image: url();
 }
 .brief-presentation h2 {
   text-transform: uppercase;
@@ -249,6 +213,7 @@
   transform: translate(-15px, -15px);
   background-color: #ff2db6;
 }
+
 .arianna-img {
   width: 350px;
   height: auto;
@@ -275,7 +240,7 @@
   transform: translateX(-12px);
 }
 
-/* ABOUT ME */
+/* ----------- ABOUT ME  -------------*/
 
 .about-me {
   margin: 80px 100px;
@@ -284,44 +249,47 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.anime-coder {
+.hands-on-pc {
   width: 350px;
   height: auto;
-  border-radius: 50px;
+}
+.about-me-heading p,
+.my-skills-heading p,
+.my-projects-heading p {
+  font-size: 60px;
+  font-family: "klemer";
+  color: #dcbbd7;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #680747, 1px 2px 0px #680747, 1px 3px 0px #680747,
+    1px 4px 0px #680747, 1px 5px 0px #8c0d8c, 1px 6px 0px #680747,
+    1px 10px 5px rgba(16, 16, 16, 0.5), 1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3), 1px 25px 50px rgba(16, 16, 16, 0.2);
 }
 
 .about-me-paragraph {
   display: flex;
-  flex-direction: column;
-  width: 35%;
-  align-items: flex-start;
   justify-content: center;
   gap: 30px;
 }
 
-.about-me-paragraph h2 {
-  font-size: 80px;
-  position: relative;
-  right: 180px;
-  width: 500px;
-}
 .about-me-paragraph div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.slogan {
+  font-family: "phitagate";
+  font-size: 50px;
+}
+.slogan-and-description {
+  flex-direction: column;
+  gap: 20px;
+}
 .p-about-me-caption {
   opacity: 0.7;
+  width: 75%;
 }
-.horizontal-dots {
-  filter: invert(80%);
-  width: 150px;
-  height: 150px;
-  transform: rotate(45deg);
-  position: relative;
-  right: 250px;
-  filter: hue-rotate(50%);
-}
+
 .about-me-paragraph button {
   display: flex;
   flex-direction: row;
@@ -379,9 +347,7 @@
 .group:hover {
   animation-play-state: paused;
 }
-.card{
-  width: 50px;
-}
+
 @keyframes scrolling {
   0% {
     transform: translateX(0);
@@ -395,7 +361,6 @@
   width: 200px;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
   padding: 30px;
   transition: all 0.2s ease-in-out;
 }
@@ -403,8 +368,73 @@
 .card:hover {
   width: 210px;
 }
+.my-skills-heading {
+  display: flex;
+  gap: 40px;
+  margin-left: 15%;
+}
 
-/* MEDIA QUERIES  */
+.my-skills-heading img {
+  filter: invert(100%);
+  width: 15%;
+  height: auto;
+}
+
+/* ----------MY PROJECTS---------- */
+
+.my-projects {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.pixelPlayground_img {
+  width: 500px;
+}
+
+.lego-picture-logo {
+  width: 460px;
+}
+.projects-presentation img {
+  height: fit-content;
+  border-radius: 30px;
+}
+
+.projects-presentation {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+.projects-title {
+  font-size: larger;
+}
+.project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#lego-project {
+  text-align: end;
+}
+.projects-logos {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.projects-logos img {
+  width: 50px;
+  border-radius: 5px;
+}
+.what-did-we-use {
+  margin-bottom: 12px;
+  text-align: center;
+}
+.overlay {
+  position: relative;
+}
+
+/* ------------- MEDIA QUERIES ------------- */
 
 @media screen and (max-width: 768px) {
   .AriannaGiaccari {
@@ -451,18 +481,71 @@
   }
 
   .about-me {
-    margin: 100px 50px;
+    margin: 50px;
+    gap: 30px;
   }
-  .anime-coder {
-    width: 300px;
+  .hands-on-pc {
+    display: none;
   }
   .about-me {
     flex-wrap: wrap;
   }
-  .about-me-paragraph h2 {
-    width: 500px;
-    right: 40px;
+  .card {
+    width: 170px;
+  }
+  .card:hover {
+    width: 180px;
+  }
+  .about-me-paragraph {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+
+  /* ---------MY SKILLS -------------- */
+  .about-me-heading p,
+  .my-skills-heading p,
+  .my-projects-heading p {
     font-size: 50px;
+    transform: translateX(11px) translateY(20px) translateZ(75px)
+      perspective(200px);
+  }
+  .my-skills-heading img {
+    width: 15%;
+    right: 30px;
+  }
+
+  /* -------MY PROJECTS ---------- */
+
+  .my-projects-heading p {
+    text-align: right;
+  }
+  .projects-presentation {
+    flex-wrap: wrap;
+  }
+  #pxlpg-project {
+    text-align: justify;
+  }
+  .pixelPlayground_img {
+    width: 440px;
+  }
+
+  .lego-picture-logo {
+    width: 400px;
+  }
+  #lego-project {
+    text-align: justify;
+    flex-wrap: wrap-reverse;
+  }
+  .project-description {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
   }
 }
 

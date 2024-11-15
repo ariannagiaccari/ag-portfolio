@@ -38,6 +38,7 @@
   left: 0;
   background: url(media/background.png);
   overflow-x: hidden;
+  scroll-behavior: smooth;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.581);
 }
 
@@ -145,19 +146,19 @@
   font-size: 85px;
   line-height: 63px;
   font-family: "archivoBlack";
-
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: -4px;
-  /* color: transparent;
-  -webkit-text-stroke-width: 1.2px;
-  -webkit-text-stroke-color: rgb(255, 0, 170);
-  text-shadow: none; */
-  background-image: url();
+  letter-spacing: -8px;
+  background-image: url(media/wave-rose.png);
+  background-size: 100%;
+  background-position: -40px -160px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.581);
 }
 .brief-presentation h2 {
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.7;
   font-size: 33px;
 }
 
@@ -255,7 +256,8 @@
 }
 .about-me-heading p,
 .my-skills-heading p,
-.my-projects-heading p {
+.my-projects-heading p,
+.get-in-touch {
   font-size: 60px;
   font-family: "klemer";
   color: #dcbbd7;
@@ -267,6 +269,7 @@
 }
 
 .about-me-paragraph {
+  width: 60%;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -290,7 +293,8 @@
   width: 75%;
 }
 
-.about-me-paragraph button {
+.about-me-paragraph button,
+.contact-me-form button {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -308,7 +312,8 @@
   padding-left: 25px;
 }
 
-.about-me-paragraph button:after {
+.about-me-paragraph button:after,
+.contact-me-form button:after {
   content: "➟";
   position: relative;
   opacity: 0;
@@ -319,13 +324,15 @@
   font-size: 23px;
 }
 
-.about-me-paragraph button:hover {
+.about-me-paragraph button:hover,
+.contact-me-form button:hover {
   padding-right: 24px;
   padding-left: 15px;
   background-color: #ff2db6;
 }
 
-.about-me-paragraph button:hover:after {
+.about-me-paragraph button:hover:after,
+.contact-me-form button:hover:after {
   opacity: 1;
   left: 5px;
 }
@@ -386,7 +393,7 @@
   margin: 100px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
 }
 
 .pixelPlayground_img {
@@ -434,6 +441,48 @@
   position: relative;
 }
 
+/* --------------- GET IN TOUCH FORM ------------ */
+
+.contact-me-container {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact-me-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.contact-me-form input,
+.contact-me-form textarea {
+  width: 270px;
+  height: 40px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+}
+
+.contact-me-form textarea {
+  height: 100px;
+}
+.get-in-touch {
+  margin-bottom: 40px;
+}
+
+.contact-me-form button {
+  padding-left: 30px;
+  width: 100px;
+}
+
+/* -------- FOOTER --------- */
+
+.ag-3d-text {
+  width: 150px;
+}
+
 /* ------------- MEDIA QUERIES ------------- */
 
 @media screen and (max-width: 768px) {
@@ -445,6 +494,9 @@
     width: 75px;
     margin: 120px 0px 0px 70px;
     transform: rotate(0deg);
+  }
+  .myName {
+    background-position: 10px -100px;
   }
 
   .main-presentation {
@@ -506,14 +558,15 @@
     text-align: justify;
     margin-bottom: 50px;
   }
-
+  .slogan {
+    text-align: center;
+    font-size: 45px;
+  }
   /* ---------MY SKILLS -------------- */
   .about-me-heading p,
   .my-skills-heading p,
   .my-projects-heading p {
     font-size: 50px;
-    transform: translateX(11px) translateY(20px) translateZ(75px)
-      perspective(200px);
   }
   .my-skills-heading img {
     width: 15%;
@@ -523,7 +576,7 @@
   /* -------MY PROJECTS ---------- */
 
   .my-projects-heading p {
-    text-align: right;
+    text-align: center;
   }
   .projects-presentation {
     flex-wrap: wrap;
@@ -547,6 +600,8 @@
     align-items: center;
     gap: 16px;
   }
+
+  /* ------ GET IN TOUCH FORM -------------- */
 }
 
 /* 

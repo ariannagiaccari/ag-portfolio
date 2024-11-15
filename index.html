@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="media/AG-3d-text.png">
     <title>AriannaGiaccari</title>
   </head>
   <body>
@@ -16,8 +17,8 @@
         </div>
         <ul>
           <li><a class="home" href="">Home</a></li>
-          <li><a class="about" href="">About</a></li>
-          <li><a class="projects" href="">Projects</a></li>
+          <li><a class="about" href="#about">About</a></li>
+          <li><a class="projects" href="#projects">Projects</a></li>
           <li><a class="contact" href="">Contact</a></li>
         </ul>
       </nav>
@@ -44,7 +45,8 @@
             <!-- <img class="arrow-down" src="media\arrow-down.png" alt=""> -->
           </div>
           <!-- 
-CV AND PROFILE BIG PIC -->
+              
+          CV AND PROFILE BIG PIC -->
 
           <div class="profile-pic">
             <a href="media/cv-2-AG.pdf" target="_blank">
@@ -76,7 +78,7 @@ CV AND PROFILE BIG PIC -->
         </div>
 
         <!-- ABOUT ME  -->
-        <div class="about-me">
+        <div id="about" class="about-me">
           <div class="about-me-heading">
             <p>About me</p>
             <img
@@ -101,10 +103,9 @@ CV AND PROFILE BIG PIC -->
                 grow. I am ready to bring energy and creativity to every
                 project. <br /><br />
                 Let’s code and create something amazing together!
-              </p>  
+              </p>
               <button><span>Contact me</span></button>
             </div>
-          
           </div>
         </div>
 
@@ -163,7 +164,7 @@ CV AND PROFILE BIG PIC -->
 
         <!-- ----- MY PROJECTS ------ -->
 
-        <div class="my-projects">
+        <div id="projects" class="my-projects">
           <div class="my-projects-heading">
             <p>My projects</p>
           </div>
@@ -225,6 +226,35 @@ CV AND PROFILE BIG PIC -->
                 alt="lego-picture-logo"
             /></a>
           </div>
+        </div>
+
+        <!-- ------------ CONTACT ME FORM -------------- -->
+        <div class="contact-me-container">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <p class="get-in-touch">Get in touch!</p>
+            <div class="contact-me-form">
+              <input
+                type="hidden"
+                name="access_key"
+                value="8f865a64-5f11-483c-9693-cce74335fe04"
+              />
+              <input type="text" name="name" placeholder="Full Name" />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea name="message" placeholder="Message ..."></textarea>
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-ag">
+          <div>
+            <img class="ag-3d-text" src="media\AG-3d-text.png" alt="" />
+          </div>
+          <div>
+            <img class="heading-links" src="media/github.png" alt="" />
+            <img class="heading-links" src="media/linkedin.png" alt="" />
+          </div>
+          <p>2024 All Right Reserved</p>
         </div>
       </div>
     </div>

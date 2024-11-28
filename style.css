@@ -649,15 +649,15 @@
       display: none;
     }
     .navbar {
-      font-size: smaller;
+      font-size: 10px;
       height: 5%;
       width: 80%;
       justify-content: center;
     }
     .navbar ul {
-      gap: 50px;
+      gap: 70px;
       text-align: center;
-      margin-right: 60px;
+      margin-right: 70px;
     }
     .arrow-with-scribble {
       width: 70px;
@@ -708,9 +708,10 @@
     }
     .my-projects{
       margin: 50px;
+      align-items: center;
     }
     .pixelPlayground_img {
-      width: 320px;
+      width: 300px;
   }
   .lego-picture-logo {
     width: 300px;
@@ -723,10 +724,16 @@
   width: 40px;
   }
   .footer-ag{
-    height: 150px;
+    height: 100px;
+    padding: 20px;
+    font-size: 10px;
   }
   .ag-3d-text {
-    width: 80px;
+    width: 50px;
+}
+
+.heading-links{
+  width: 20px;
 }
 }
 

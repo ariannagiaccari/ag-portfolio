@@ -399,12 +399,12 @@
 
 .pixelPlayground_img {
   width: 500px;
-  height: auto;
+  height: 100%;
 }
 
 .lego-picture-logo {
   width: 460px;
-  height: auto;
+  height: 100%;
 }
 .projects-presentation img {
   height: fit-content;
@@ -715,11 +715,11 @@
     }
     .pixelPlayground_img {
       width: 300px;
-     height: 100%;
+     height: 300px;
     }
     .lego-picture-logo {
       width: 300px;
-     height: 100%;
+     height: 300px;
     }
     .project-description {
       font-size: 13px;

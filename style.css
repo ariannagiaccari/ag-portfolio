@@ -714,12 +714,12 @@
       align-items: center;
     }
     .pixelPlayground_img {
-      width: 300px;
-     height: 300px;
+      width: 260px;
+     height: auto;
     }
     .lego-picture-logo {
-      width: 300px;
-     height: 300px;
+      width: 260px;
+     height: auto;
     }
     .project-description {
       font-size: 13px;

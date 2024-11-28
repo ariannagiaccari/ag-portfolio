@@ -57,7 +57,7 @@
   padding: 20px;
   border: 1px solid #680747;
   box-shadow: 1px 1px 10px #3d062b;
-  background: #0a020c;
+  background: #100313;
   border-radius: 40px;
   z-index: 10000;
   gap: 20px;
@@ -143,15 +143,13 @@
 }
 
 .myName {
-  font-size: 85px;
+  font-size: 70px;
   line-height: 63px;
   font-family: "archivoBlack";
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: -8px;
-  background-image: url(media/wave-rose.png);
-  background-size: 100%;
-  background-position: -40px -160px;
+  background-image: linear-gradient(45deg, #fcb5f3, #af4261);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.581);
@@ -249,8 +247,10 @@
   gap: 50px;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .hands-on-pc {
+  margin-top: 20px;
   width: 350px;
   height: auto;
 }
@@ -283,6 +283,7 @@
 .slogan {
   font-family: "phitagate";
   font-size: 50px;
+  width: 600px;
 }
 .slogan-and-description {
   flex-direction: column;
@@ -480,23 +481,78 @@
 /* -------- FOOTER --------- */
 
 .ag-3d-text {
-  width: 150px;
+  width: 100px;
+}
+
+.footer-ag {
+  margin: 30px;
+  padding: 30px;
+  height: 190px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #680747;
+  box-shadow: 1px 1px 10px #3d062b;
+  background: #100313;
+}
+
+.footer-upper-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-lower-part {
+  text-align: center;
+  opacity: 0.6;
+}
+
+.footer-line {
+  color: #680747;
+  margin-bottom: 8px;
+  font-size: small;
 }
 
 /* ------------- MEDIA QUERIES ------------- */
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
   .AriannaGiaccari {
     display: none;
   }
+  .projects-presentation {
+    flex-wrap: wrap;
+  }
+  #lego-project {
+    text-align: justify;
+    flex-wrap: wrap-reverse;
+  }
+  .hands-on-pc {
+    display: none;
+  }
+  .about-me-paragraph {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+  .footer-line {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 768px) {
   .arrow-with-scribble {
     width: 75px;
     margin: 120px 0px 0px 70px;
     transform: rotate(0deg);
   }
   .myName {
-    background-position: 10px -100px;
+    font-size: 60px;
+  }
+  .home {
+    display: none;
   }
 
   .main-presentation {
@@ -519,9 +575,6 @@
   .navbar ul li a:hover:after {
     width: 10%;
   }
-  .horizontal-dots {
-    display: none;
-  }
 
   .arianna-img {
     width: 200px;
@@ -536,11 +589,12 @@
     margin: 50px;
     gap: 30px;
   }
-  .hands-on-pc {
-    display: none;
-  }
+
   .about-me {
     flex-wrap: wrap;
+  }
+  .about-me-paragraph div {
+    width: 100%;
   }
   .card {
     width: 170px;
@@ -548,16 +602,7 @@
   .card:hover {
     width: 180px;
   }
-  .about-me-paragraph {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    text-align: justify;
-    margin-bottom: 50px;
-  }
+
   .slogan {
     text-align: center;
     font-size: 45px;
@@ -565,7 +610,8 @@
   /* ---------MY SKILLS -------------- */
   .about-me-heading p,
   .my-skills-heading p,
-  .my-projects-heading p {
+  .my-projects-heading p,
+  .get-in-touch {
     font-size: 50px;
   }
   .my-skills-heading img {
@@ -578,9 +624,7 @@
   .my-projects-heading p {
     text-align: center;
   }
-  .projects-presentation {
-    flex-wrap: wrap;
-  }
+
   #pxlpg-project {
     text-align: justify;
   }
@@ -591,10 +635,7 @@
   .lego-picture-logo {
     width: 400px;
   }
-  #lego-project {
-    text-align: justify;
-    flex-wrap: wrap-reverse;
-  }
+
   .project-description {
     justify-content: center;
     align-items: center;
@@ -602,6 +643,91 @@
   }
 
   /* ------ GET IN TOUCH FORM -------------- */
+
+  @media screen and (max-width: 570px) {
+    .developer-png {
+      display: none;
+    }
+    .navbar {
+      font-size: smaller;
+      height: 5%;
+      width: 80%;
+      justify-content: center;
+    }
+    .navbar ul {
+      gap: 50px;
+      text-align: center;
+      margin-right: 60px;
+    }
+    .arrow-with-scribble {
+      width: 70px;
+      margin: 90px 0px 0px 70px;
+    }
+    .brief-presentation h2 {
+      font-size: 25px;
+      margin-top: 20px;
+    }
+    .myName {
+      font-size: 50px;
+      line-height: 38px;
+      letter-spacing: -6px;
+    }
+    .short-caption-fed {
+      font-size: 13px;
+    }
+    .arianna-img {
+      width: 150px;
+      margin-top: 20px;
+    }
+    .profile-pic button {
+      width: 50px;
+      height: 50px;
+      font-size: 12px;
+    }
+    .download-png {
+      width: 20px;
+    }
+    .about-me-heading p,
+    .my-skills-heading p,
+    .my-projects-heading p,
+    .get-in-touch {
+      font-size: 40px;
+    }
+    .slogan {
+      font-size: 30px;
+    }
+    .about-me-paragraph div{
+      font-size: 13px;
+    }
+    .about-me{
+      margin: 30px;
+      margin-top: 50px;
+    }
+    .card{
+      width: 150px;
+    }
+    .my-projects{
+      margin: 50px;
+    }
+    .pixelPlayground_img {
+      width: 320px;
+  }
+  .lego-picture-logo {
+    width: 300px;
+}
+.project-description{
+  font-size: 13px;
+  width: 85%;
+}
+.projects-logos img {
+  width: 40px;
+  }
+  .footer-ag{
+    height: 150px;
+  }
+  .ag-3d-text {
+    width: 80px;
+}
 }
 
 /* 

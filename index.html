@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="media/AG-3d-text.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="media\AG-3d-text-Photoroom.png"
+    />
     <title>AriannaGiaccari</title>
   </head>
   <body>
@@ -13,13 +17,13 @@
       <nav class="navbar">
         <div>
           <img class="developer-png" src="media\developer2.PNG" alt="" />
-          <p class="AriannaGiaccari">AriannaGiaccari</p>
+          <p class="AriannaGiaccari">Arianna Giaccari</p>
         </div>
         <ul>
           <li><a class="home" href="">Home</a></li>
           <li><a class="about" href="#about">About</a></li>
           <li><a class="projects" href="#projects">Projects</a></li>
-          <li><a class="contact" href="">Contact</a></li>
+          <li><a class="contact" href="#contact-form">Contact</a></li>
         </ul>
       </nav>
 
@@ -37,12 +41,11 @@
             <p class="myName">Arianna Giaccari</p>
             <div>
               <p>________</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                vel quos ratione officia sit accusantium!
+              <p class="short-caption-fed">
+                Junior Front-end Developer, passionate about crafting beautiful
+                and functional websites. Excited for what's next!
               </p>
             </div>
-            <!-- <img class="arrow-down" src="media\arrow-down.png" alt=""> -->
           </div>
           <!-- 
               
@@ -63,7 +66,7 @@
 
           <!-- SOCIAL LINKS  -->
           <div class="social-links">
-            <a href="https://www.github.com/ariannagiaccari/">
+            <a href="https://www.github.com/ariannagiaccari/" target="_blank">
               <img class="heading-links" src="media\github.png" alt=""
             /></a>
             <a
@@ -71,7 +74,7 @@
               target="_blank"
               ><img class="heading-links" src="media\linkedin.png" alt=""
             /></a>
-            <a href="https://www.instagram.com/ariannagiaccari/"
+            <a href="https://www.instagram.com/ariannagiaccari/" target="_blank"
               ><img class="heading-links" src="media\instagram.png" alt=""
             /></a>
           </div>
@@ -104,7 +107,9 @@
                 project. <br /><br />
                 Let’s code and create something amazing together!
               </p>
-              <button><span>Contact me</span></button>
+              <a style="text-decoration: none" href="#contact-form"
+                ><button><span>Contact me</span></button></a
+              >
             </div>
           </div>
         </div>
@@ -229,7 +234,7 @@
         </div>
 
         <!-- ------------ CONTACT ME FORM -------------- -->
-        <div class="contact-me-container">
+        <div id="contact-form" class="contact-me-container">
           <form action="https://api.web3forms.com/submit" method="POST">
             <p class="get-in-touch">Get in touch!</p>
             <div class="contact-me-form">
@@ -247,14 +252,30 @@
         </div>
 
         <div class="footer-ag">
-          <div>
-            <img class="ag-3d-text" src="media\AG-3d-text.png" alt="" />
+          <div class="footer-upper-part">
+            <img
+              class="ag-3d-text"
+              src="media\AG-3d-text-Photoroom.png"
+              alt=""
+            />
+
+            <div class="footer-links">
+              <a href="https://www.github.com/ariannagiaccari/" target="_blank">
+                <img class="heading-links" src="media\github.png" alt="" /></a
+              ><span>&nbsp &nbsp</span>
+              <a
+                href="https://www.linkedin.com/in/arianna-giaccari-03aab4274/"
+                target="_blank"
+                ><img class="heading-links" src="media\linkedin.png" alt=""
+              /></a>
+            </div>
           </div>
-          <div>
-            <img class="heading-links" src="media/github.png" alt="" />
-            <img class="heading-links" src="media/linkedin.png" alt="" />
+          <div class="footer-lower-part">
+            <p class="footer-line">
+              _________________________________________________________________________________________
+            </p>
+            <p>&#169 2024 All Rights Reserved</p>
           </div>
-          <p>2024 All Right Reserved</p>
         </div>
       </div>
     </div>

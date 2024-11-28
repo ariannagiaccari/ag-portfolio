@@ -148,11 +148,11 @@
   font-family: "archivoBlack";
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: -8px;
-  background-image: linear-gradient(45deg, #fcb5f3, #af4261);
+  letter-spacing: -6px;
+  background-image: linear-gradient(45deg, #63285b, #ff769d);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.581);
+  text-shadow: none;
 }
 .brief-presentation h2 {
   text-transform: uppercase;
@@ -399,10 +399,12 @@
 
 .pixelPlayground_img {
   width: 500px;
+  height: auto;
 }
 
 .lego-picture-logo {
   width: 460px;
+  height: auto;
 }
 .projects-presentation img {
   height: fit-content;
@@ -722,6 +724,7 @@
 }
 .projects-logos img {
   width: 40px;
+  height: auto;
   }
   .footer-ag{
     height: 100px;

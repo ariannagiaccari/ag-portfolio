@@ -407,7 +407,7 @@
   height: 100%;
 }
 .projects-presentation img {
-  height: fit-content;
+  height: auto;
   border-radius: 30px;
 }
 

@@ -435,6 +435,7 @@
 .projects-logos img {
   width: 50px;
   border-radius: 5px;
+  height: auto;
 }
 .what-did-we-use {
   margin-bottom: 12px;
@@ -698,46 +699,49 @@
     .slogan {
       font-size: 30px;
     }
-    .about-me-paragraph div{
+    .about-me-paragraph div {
       font-size: 13px;
     }
-    .about-me{
+    .about-me {
       margin: 30px;
       margin-top: 50px;
     }
-    .card{
+    .card {
       width: 150px;
     }
-    .my-projects{
+    .my-projects {
       margin: 50px;
       align-items: center;
     }
     .pixelPlayground_img {
       width: 300px;
-  }
-  .lego-picture-logo {
-    width: 300px;
-}
-.project-description{
-  font-size: 13px;
-  width: 85%;
-}
-.projects-logos img {
-  width: 40px;
-  height: auto;
-  }
-  .footer-ag{
-    height: 100px;
-    padding: 20px;
-    font-size: 10px;
-  }
-  .ag-3d-text {
-    width: 50px;
-}
+      height: auto;
+    }
+    .lego-picture-logo {
+      width: 300px;
+      height: auto;
+    }
+    .project-description {
+      font-size: 13px;
+      width: 85%;
+    }
+    .projects-logos img {
+      width: 40px;
+      height: auto;
+    }
+    .footer-ag {
+      height: 100px;
+      padding: 20px;
+      font-size: 10px;
+    }
+    .ag-3d-text {
+      width: 50px;
+    }
 
-.heading-links{
-  width: 20px;
-}
+    .heading-links {
+      width: 20px;
+    }
+  }
 }
 
 /* 

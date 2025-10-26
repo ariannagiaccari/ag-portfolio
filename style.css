@@ -24,20 +24,21 @@
   src: url("fonts/klemer-display-demo.regular.ttf");
 }
 
-@keyframes move {
+/* @keyframes move {
   100% {
     transform: translate3d(30px, 30px, 30px) rotate(360deg);
   }
-}
-
-.background {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  color: white;
-  left: 0;
-  background: url(media/background.png);
+} */
+body {
   overflow-x: hidden;
+  background: url(media/agp-background.svg);
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+.background {
+  width: 100%;
+  color: white;
   scroll-behavior: smooth;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.581);
 }
@@ -251,8 +252,10 @@
 }
 .hands-on-pc {
   margin-top: 20px;
-  width: 350px;
+  width: 300px;
   height: auto;
+  mask-image: radial-gradient(circle, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 100%);
 }
 .about-me-heading p,
 .my-skills-heading p,
@@ -289,13 +292,40 @@
   flex-direction: column;
   gap: 20px;
 }
-.p-about-me-caption {
+.p-about-me-caption, .code-with-me {
   opacity: 0.7;
-  width: 75%;
+  width: 80%;
 }
 
+.code-with-me{
+  text-align: center;
+}
+.code-with-me button{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #6827a5;
+  animation: typing 3s steps(50, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
 .about-me-paragraph button,
-.contact-me-form button {
+.contact-me-form button, 
+.code-with-me button {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -314,7 +344,8 @@
 }
 
 .about-me-paragraph button:after,
-.contact-me-form button:after {
+.contact-me-form button:after, 
+.code-with-me button:after {
   content: "➟";
   position: relative;
   opacity: 0;
@@ -326,14 +357,16 @@
 }
 
 .about-me-paragraph button:hover,
-.contact-me-form button:hover {
+.contact-me-form button:hover, 
+.code-with-me button:hover {
   padding-right: 24px;
   padding-left: 15px;
   background-color: #ff2db6;
 }
 
 .about-me-paragraph button:hover:after,
-.contact-me-form button:hover:after {
+.contact-me-form button:hover:after, 
+.code-with-me button:hover:after {
   opacity: 1;
   left: 5px;
 }
@@ -514,10 +547,34 @@
   margin-bottom: 8px;
   font-size: small;
 }
+#toTopBtn {
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  z-index: 1000;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f70776;
+  color: white;
+  border: none;
+  font-size: 40px;
+  transition: all 300ms;
+}
+#toTopBtn:hover {
+  background-color: #ff2db6;
+  width: 80px;
+  height: 80px;
+  transition: all 300ms;
+}
 
 /* ------------- MEDIA QUERIES ------------- */
 @media screen and (max-width: 1050px) {
-  .AriannaGiaccari {
+  .ariannaGiaccari {
     display: none;
   }
   .projects-presentation {
@@ -644,6 +701,14 @@
     align-items: center;
     gap: 16px;
   }
+  #toTopBtn{
+    width: 50px ;
+    height: 50px ;
+  }
+  #toTopBtn:hover{
+    width: 60px ;
+    height: 60px ;
+  }
 
   /* ------ GET IN TOUCH FORM -------------- */
 
@@ -719,7 +784,7 @@
     }
     .lego-picture-logo {
       width: 280px;
-     height: 186.66px;
+      height: 186.66px;
     }
     .project-description {
       font-size: 13px;
@@ -727,7 +792,6 @@
     }
     .projects-logos img {
       width: 40px;
-
     }
     .footer-ag {
       height: 100px;

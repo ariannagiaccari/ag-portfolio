@@ -294,8 +294,25 @@ body {
 }
 .p-about-me-caption, .code-with-me {
   opacity: 0.7;
-  width: 80%;
+  width: 75%;
 }
+
+.code-with-me {
+  width: 60%;
+  padding: 25px 50px;
+  border: 1px solid #680747;
+  box-shadow: 1px 1px 10px #3d062b;
+  background: #100313;
+  border-radius: 40px;
+  transition: all 0.6s ease-in-out;
+}
+
+.code-with-me:hover {
+  border: 1px solid #a54786;
+  box-shadow: 5px 5px 20px #4d0936;
+  transition: all 0.6s ease-in-out;
+}
+
 
 .code-with-me{
   text-align: center;
@@ -642,6 +659,7 @@ body {
   .code-with-me{
     text-align: justify;
     margin-bottom: 50px;
+
   }
   .card {
     width: 170px;

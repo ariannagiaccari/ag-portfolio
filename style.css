@@ -578,7 +578,7 @@ body {
     justify-content: center;
     gap: 30px;
     text-align: justify;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
   }
   .footer-line {
     display: none;
@@ -641,6 +641,7 @@ body {
   }
   .code-with-me{
     text-align: justify;
+    margin-bottom: 50px;
   }
   .card {
     width: 170px;

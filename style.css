@@ -286,7 +286,6 @@ body {
 .slogan {
   font-family: "phitagate";
   font-size: 50px;
-  width: 600px;
 }
 .slogan-and-description {
   flex-direction: column;

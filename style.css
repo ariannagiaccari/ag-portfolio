@@ -46,8 +46,7 @@ body {
 /* NAVBAR - links */
 
 .navbar {
-  width: 93%;
-  height: 10%;
+  width: auto;
   position: fixed;
   overflow: hidden;
   display: flex;
@@ -65,7 +64,7 @@ body {
 }
 .navbar div {
   display: flex;
-  width: 50%;
+  width: 40%;
   align-items: center;
   gap: 20px;
 }
@@ -77,11 +76,11 @@ body {
 .navbar ul {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 60px;
   list-style: none;
   width: fit-content;
   cursor: pointer;
-  margin-right: 20px;
+  padding-right: 60px;
 }
 
 .navbar ul li a {
@@ -122,22 +121,22 @@ body {
   width: 80px;
   opacity: 0.8;
   filter: invert(100%);
-  margin: 120px 0px 0px 80px;
-  transform: rotate(10deg);
+  margin: 0px 0px 0px 100px;
+  transform: rotate(20deg);
 }
 
 /* BRIEF PRESENTATION - AG FRONT END WEB DEV */
 
 .main-presentation {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 20px;
+  margin: 30px 120px;
 }
 
 .brief-presentation {
-  width: 45%;
-  margin: -30px 0px 0px 150px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -397,13 +396,13 @@ body {
   }
 }
 
-.card {
+.logo-card {
   width: 200px;
   padding: 30px;
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover {
+.logo-card:hover {
   transform: scale(1.2);
 }
 
@@ -433,36 +432,19 @@ body {
 }
 
 .pixelPlayground_img {
-  width: 500px; 
+  width: 500px;
   height: 100%;
-  transition: transform 0.4s ease-in-out;
-  transform-style: preserve-3d;
-}
-
-.pixelPlayground_img:hover {
-  transform: perspective(600px) rotateY(6deg) scale(1.05); 
 }
 
 .lego-picture-logo {
   width: 460px;
   height: 100%;
-  transition: transform 0.4s ease-in-out;
-  transform-style: preserve-3d;
 }
-
-.lego-picture-logo:hover {
-  transform: perspective(600px) rotateY(-6deg) scale(1.05); 
-}
-
 
 .tag-project-preview {
   width: 600px;
-  transition: transform 0.5s ease-in-out;
-  transform-style: preserve-3d;          
 }
-.tag-project-preview:hover {
-  transform: perspective(600px) rotateY(6deg) scale(1.1);
-}
+
 .projects-presentation img {
   height: auto;
   border-radius: 30px;
@@ -597,16 +579,25 @@ body {
   transition: all 300ms;
 }
 
-/* ------------- MEDIA QUERIES ------------- */
-@media screen and (max-width: 1050px) {
-  .ariannaGiaccari {
-    display: none;
+@media screen and (max-width: 1200px) {
+  .about-me-paragraph {
+    width: 80%;
   }
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+@media screen and (max-width: 1050px) {   
   .projects-presentation {
     flex-wrap: wrap;
   }
+
   #lego-project {
-    text-align: justify;
+    text-align: start;
+  }
+  .my-skills {
+    height: 250px;
+  }
+  #lego-project {
     flex-wrap: wrap-reverse;
   }
   .hands-on-pc {
@@ -630,7 +621,7 @@ body {
 @media screen and (max-width: 768px) {
   .arrow-with-scribble {
     width: 75px;
-    margin: 120px 0px 0px 70px;
+    margin: 0 0 0 30px;
     transform: rotate(0deg);
   }
   .myName {
@@ -641,9 +632,9 @@ body {
   }
 
   .main-presentation {
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 20px;
   }
 
   .brief-presentation {
@@ -652,9 +643,6 @@ body {
     text-align: center;
   }
   .navbar {
-    justify-content: space-around;
-    height: 8%;
-    width: 90%;
     gap: 10px;
   }
   .navbar ul li a:hover:after {
@@ -685,10 +673,10 @@ body {
     margin-bottom: 50px;
 
   }
-  .card {
+  .logo-card {
     width: 170px;
   }
-  .card:hover {
+  .logo-card:hover {
     width: 180px;
   }
 
@@ -714,14 +702,19 @@ body {
     text-align: center;
   }
 
-  #pxlpg-project {
+  #pxlpg-project, #lego-project, #tag-project {
     text-align: justify;
   }
+  
   .pixelPlayground_img {
     width: 440px;
   }
 
   .lego-picture-logo {
+    width: 400px;
+  }
+
+  .tag-project-preview {
     width: 400px;
   }
 
@@ -731,14 +724,15 @@ body {
     gap: 16px;
   }
   #toTopBtn{
-    width: 50px ;
-    height: 50px ;
+    width: 50px;
+    height: 50px;
+    font-size: 200%;
   }
   #toTopBtn:hover{
     width: 60px ;
     height: 60px ;
   }
-
+}
   /* ------ GET IN TOUCH FORM -------------- */
 
   @media screen and (max-width: 570px) {
@@ -747,18 +741,10 @@ body {
     }
     .navbar {
       font-size: 10px;
-      height: 5%;
-      width: 80%;
       justify-content: center;
     }
     .navbar ul {
-      gap: 70px;
-      text-align: center;
-      margin-right: 70px;
-    }
-    .arrow-with-scribble {
-      width: 70px;
-      margin: 90px 0px 0px 70px;
+      gap: 50px;
     }
     .brief-presentation h2 {
       font-size: 25px;
@@ -800,7 +786,7 @@ body {
       margin: 30px;
       margin-top: 50px;
     }
-    .card {
+    .logo-card {
       width: 150px;
     }
     .my-projects {
@@ -815,6 +801,9 @@ body {
       width: 280px;
       height: 186.66px;
     }
+    .tag-project-preview {
+      width: 300px;
+    }
     .project-description {
       font-size: 13px;
       width: 85%;
@@ -822,6 +811,7 @@ body {
     .projects-logos img {
       width: 40px;
     }
+
     .footer-ag {
       height: 100px;
       padding: 20px;
@@ -834,7 +824,6 @@ body {
     .heading-links {
       width: 20px;
     }
-  }
 }
 
 /* 

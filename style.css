@@ -45,73 +45,32 @@ body {
 
 /* NAVBAR - links */
 
-.navbar {
-  width: auto;
-  position: fixed;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  margin: 20px 40px 0px 40px;
-  padding: 20px;
-  border: 1px solid #680747;
-  box-shadow: 1px 1px 10px #3d062b;
+.navbar .container-fluid {
   background: #100313;
   border-radius: 40px;
-  z-index: 10000;
-  gap: 20px;
+  margin: 20px;
+  padding: 5px 20px;
+  box-shadow: 1px 1px 10px #3d062b;
 }
-.navbar div {
-  display: flex;
-  width: 40%;
-  align-items: center;
-  gap: 20px;
+
+.navbar ul {
+  gap: 60px;
+} 
+
+.navbar .container-fluid .a,  .navbar .container-fluid .nav-link, .navbar-brand {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  opacity: 0.7;
+}
+.navbar .container-fluid .nav-link.active  {
+  color: rgba(255, 255, 255, 1);
 }
 
 .developer-png {
   width: 30px;
-}
-
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  list-style: none;
-  width: fit-content;
-  cursor: pointer;
-  padding-right: 60px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.555);
-}
-
-.navbar ul li a:after {
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 3px;
-  border-radius: 20px;
-  position: absolute;
-  background: hsl(332, 94%, 50%);
-  transition: width 0.4s ease 0s, left 0.4s ease 0s;
-  width: 0;
-  text-align: center;
-}
-
-.home:hover:after {
-  width: 4.5%;
-}
-.about:hover:after {
-  width: 4.5%;
-}
-.projects:hover:after {
-  width: 5.5%;
-}
-.contact:hover:after {
-  width: 5.5%;
 }
 .navbar ul li a:hover {
   color: rgba(255, 255, 255, 0.767);
@@ -330,7 +289,7 @@ body {
   align-items: center;
   cursor: pointer;
   justify-content: center;
-  width: 160px;
+  width: 170px;
   height: 40px;
   border-radius: 30px;
   background-color: #f70776;
@@ -501,7 +460,7 @@ body {
 
 .contact-me-form input,
 .contact-me-form textarea {
-  width: 270px;
+  width: 310px;
   height: 40px;
   padding: 15px;
   border-radius: 30px;
@@ -616,6 +575,12 @@ body {
   .footer-line {
     display: none;
   }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar ul {
+    gap: 10px;
+  } 
 }
 
 @media screen and (max-width: 768px) {
@@ -743,9 +708,11 @@ body {
       font-size: 10px;
       justify-content: center;
     }
-    .navbar ul {
-      gap: 50px;
+
+    .navbar-brand {
+      font-size: 16px !important;
     }
+
     .brief-presentation h2 {
       font-size: 25px;
       margin-top: 20px;
@@ -779,11 +746,17 @@ body {
     .slogan {
       font-size: 30px;
     }
-    .about-me-paragraph div, .code-with-me {
+    .about-me-paragraph div {
       font-size: 13px;
+      margin: 0 20px 0px 20px;
+    }
+    .code-with-me {
+      font-size: 13px;
+      margin: 0 20px 50px 20px;
+      padding: 30px;
     }
     .about-me {
-      margin: 30px;
+      margin: 0px;
       margin-top: 50px;
     }
     .logo-card {
